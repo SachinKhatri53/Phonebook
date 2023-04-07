@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 text-center">
+        <h4>Add</h4>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-1">
+        <a href="/" class="btn btn-outline-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Close">
+            <i class="fa-solid fa-xmark"></i>
+        </a>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <form action="/add" class="was-validated" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="text-center">
+                <img src="/uploads/profile.jpg" class="rounded-circle" alt="..." height="150"
+                    width="150" style="object-fit: cover;" id="selected-photo">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="input-group input-group-sm mb-3">
+                    <input type="file" name="photo" onchange="displaySelectedPhoto(event)">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="firstname">Firstname</label>
+                    <input type="text" name="firstname" id="" class="form-control is-validated" required>
+                    <div class="invalid-feedback">
+                        Please enter firstname.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="lastname">Lastname</label>
+                    <input type="text" name="lastname" id="" class="form-control is-validated" required>
+                    <div class="invalid-feedback">
+                        Please enter lastname.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" name="company" id="" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" id="" class="form-control is-validated" required>
+            <div class="invalid-feedback">
+                Please enter phone number.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" name="address" id="" class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Done" class="btn btn-primary" id="">
+        </div>
+    </form>
+</div>

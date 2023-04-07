@@ -1,0 +1,33 @@
+body {
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+  
+.container-right-section{
+    padding:20px 40px !important;
+    position: fixed;
+    right: 0;
+}
+.left-top{
+    padding:20px 40px !important;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 1;
+    background-color: white;
+}
+.left-bottom{
+    padding:20px 40px !important;
+    position: absolute;
+    top:150px;
+    left: 20px;
+    height: 90%;
+}
+.list-group-flush li a{
+  text-decoration: none;
+  color: black;
+}

@@ -1,0 +1,46 @@
+<div class="left-top">
+    <div class="row">
+        <div class="col-md-8"></div>
+        <div class="col-md-2">
+            <div class="d-grid gap-2">
+                <a href="/add" class="btn btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    title="Add new contact">
+                    <i class="fa-solid fa-user-plus"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h3>Contacts</h3>
+    </div>
+    <div class="row">
+        <input type="text" name="" id="search" placeholder="Search">
+    </div>
+
+</div>
+<div class="left-bottom">
+    <div class="row">
+        <ul class="list-group list-group-flush" id="name-list">
+            {{#each phones}}
+            <li class="list-group-item fw-bold">
+                <a href="/view/{{id}}">
+                <img src="/uploads/{{photo}}"
+              class="rounded-circle" alt="..." height="50" width="50" style="object-fit: cover;">
+                {{firstname}} {{lastname}}</a>
+            </li>
+            {{/each}}
+            {{!-- <li class="list-group-item fw-bold">B</li>
+            <li class="list-group-item">Bishal Aryal</li>
+            <li class="list-group-item fw-bold">J</li>
+            <li class="list-group-item">Jenish Dahal</li>
+            <li class="list-group-item fw-bold">K</li>
+            <li class="list-group-item">Kanchan Raj Giri</li>
+            <li class="list-group-item fw-bold">N</li>
+            <li class="list-group-item">Nawbeen Bhandari</li>
+            <li class="list-group-item fw-bold">R</li>
+            <li class="list-group-item">Rabin KC</li>
+            <li class="list-group-item fw-bold">S</li>
+            <li class="list-group-item">Sachin Khatri</li> --}}
+        </ul>
+    </div>
+</div>

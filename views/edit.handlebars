@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 text-center">
+        <h4>Edit</h4>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-1">
+        <a href="/" class="btn btn-outline-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Close">
+        <i class="fa-solid fa-xmark"></i>
+        </a>
+    </div>
+</div>
+<hr>
+
+
+<div class="row">
+    <form action="/edit/{{phone.id}}?_method=PUT" class="was-validated" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="text-center">
+                <img src="/uploads/{{phone.photo}}"
+                    class="rounded-circle" alt="..." height="150" width="150" style="object-fit: cover;" id="selected-photo">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="input-group mb-3">
+                    <input type="file" name="photo" onchange="displaySelectedPhoto(event)">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Firstname</span>
+                    <input type="text" name="firstname" id="" value="{{phone.firstname}}" class="form-control is-validated" required>
+                    <div class="invalid-feedback">
+                        Please enter firstname.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Lastname</span>
+                    <input type="text" name="lastname" id="" value="{{phone.lastname}}" class="form-control is-validated" required>
+                    <div class="invalid-feedback">
+                        Please enter lastname.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Company</span>
+            <input type="text" name="company" id="" value="{{phone.company}}" class="form-control">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Phone Number</span>
+            <input type="tel" name="phone" id="" value="{{phone.phonenumber}}" class="form-control is-validated" required>
+            <div class="invalid-feedback">
+                Please enter phone number.
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Email</span>
+            <input type="email" name="email" id="" value="{{phone.email}}" class="form-control">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Address</span>
+            <input type="text" name="address" id="" value="{{phone.address}}" class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Update" class="btn btn-primary" id="">
+        </div>
+    </form>
+</div>

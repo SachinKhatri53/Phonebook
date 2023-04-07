@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Phone Book</title>
+
+  <!-- custom css -->
+  <link href="/css/style.css" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome CSS -->
+  <link href="/css/all.css" rel="stylesheet">
+  {{!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
+
+</head>
+
+<body>
+  <!-- Page Content -->
+  <div class="container-fluid h-100">
+    <div class="row" style="height:100vh">
+      <div class="col-md-4 h-100 overflow-auto container-left-section">
+        {{> sidebar}}
+      </div>
+      <div class="col-md-8 h-100 overflow-auto container-right-section">
+        {{{body}}}
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="/js/search.js"></script>
+  <script src="/js/load-photo.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
